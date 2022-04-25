@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.heading {
+  display: inline-flex;
+}
+
+.college-name, .account {
+  text-decoration: none;
+  color: black;
+}
+
+.account {
+  background-color: #81caff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 50px;
+  margin: 5px 20px;
+}
+
+.menu .navbar-nav .nav-link {
+  color: rgb(255 255 255);
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+.search {
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbox {
+  width: 80%;
+  height: 50px;
+  max-width: 250px;
+  border-radius: 50px;
+  font-size: 15px;
+  padding-left: 20px;
+}
+
+.search .icon {
+  font-size: 20px;
+}
+
+.search-btn {
+  background-color: transparent;
+  border: none;
+  padding-left: 10px;
+}
+
+.section1 {
+  width: 100%;
+  height: 1200px;
+  background-color: azure;
+}
+
+.Glance {
+  width: 100%;
+  height: 100%;
+  margin: 20px 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Glance p {
+  padding: 10px;
+  font-size: 26px;
+  text-align: center;
+}
+
+.Glance embed {
+  margin-left: 15vw;
+}
+
+.navigation {
+  font-size: 22px;
+  padding: 10px;
+}
+
+.navigation a {
+  color: black;
+  background-color: rgb(231, 244, 255);
+}
+
+.footer {
+  background-color: rgb(162, 212, 255);
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.address {
+  padding: 10px 80px;
+  margin: 0;
+}
+
+.address .col .card {
+  border: 1px solid rgb(162, 212, 255);
+  box-shadow: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.address .col .card-body {
+  background-color: rgb(162, 212, 255);
+  padding: 20px 10px;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+
+.socialmedia {
+  text-align: center;
+  font-size: 35px;
+  padding: 20px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+  padding-left: 50px;
+  color: white;
+}
+
+@media only screen and (max-width:990px) {
+  .navbar-toggler {
+    display: block;
+  }
+  .collapse ul li a {
+    text-align: center;
+  }
+  .search {
+    align-items: center;
+    justify-content: center;
+  }
+}

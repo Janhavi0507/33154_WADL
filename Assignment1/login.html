@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="First HTML Program" />
+    <title>Sign Up</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #81caff;
+      }
+
+      .bkgrd {
+        position: relative;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin: 2% 5% 5% 5%;
+        background-color: rgb(255, 255, 255);
+        border: 0.2ch white solid;
+        padding: 20px 20px 20px 20px;
+        min-width: 30ch;
+        width: 43ch;
+        max-width: 500px;
+        min-height: 40ch;
+        border-radius: 5px;
+        margin-top: 10vh;
+      }
+
+      .bkgrd::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        left: -2px;
+        z-index: -1;
+        background: #fff;
+        border-radius: 5px;
+      }
+
+      .bkgrd::after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        left: -2px;
+        z-index: -2;
+        background: #fff;
+        border-radius: 5px;
+      }
+
+
+
+      .controls {
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+        padding: 2px;
+        padding-top: 5px;
+        border-radius: 2ch;
+        background-color: inherit;
+      }
+
+      .controls a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 1px;
+        text-decoration: none;
+      }
+
+      .controls a i {
+        color: rgb(0, 0, 0);
+        font-size: 2.5ch;
+        font-weight: 800;
+        border: none;
+        margin: 0.3ch 2ch 0 1ch;
+        cursor: pointer;
+      }
+
+      .controls a:hover i {
+        color: rgb(38, 168, 255);
+      }
+
+      .company-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0vh;
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+      }
+
+      .about {
+        margin: 1ch 1ch 0ch 1ch;
+        font-size: 1.8ch;
+        font-family: 'Times New Roman';
+      }
+
+      .sign-up-form {
+        display: block;
+        width: 100%;
+      }
+
+      .field-name {
+          display: block;
+          font-weight: 600;
+          font-size: 1.5ch;
+      }
+
+      .message {
+          align-items: center;
+          justify-content: center;
+          padding-left: 1ch;
+          font-weight: 400;
+          font-size: 1.3ch;
+          color: red;
+          display: none;
+      }
+
+      .name,
+      .email,
+      .password {
+        display:inline-block;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        margin: 20px 0px;
+        padding: 2px;
+        height: 4ch;
+      }
+
+      .phone {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        margin: 2ch 0.2ch;
+        padding: 0.1vh;
+        height: 4ch;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      input[type="tel"],
+      input[type="password"],
+      input[type="date"],
+      input[type="email"],
+      input[type="search"] {
+        background-color: #fff;
+        line-height: normal;
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        color: black;
+        border: 1px solid black;
+      }
+
+      .ph-no {
+        display: flex;
+      }
+
+      .phone .ph-no input[type="tel"] {
+        width: 80%;
+        height: 3.7ch;
+        padding-left: 1ch;
+        color: black;
+        border: 1px solid black;
+      }
+      .a-dropdown-container {
+        height: 3.7ch;
+        margin-right: 1ch;
+        display: inline-flex;
+      }
+        
+      .a-dropdown-container select {
+        padding-left: 1ch;
+        background-color: rgb(235, 235, 235);
+        height: 100%;
+        border-radius: 3px;
+        border: 0.2ch groove rgb(0, 0, 0);
+      }
+
+      .submit {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 20px 0px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .submit .sign-up {
+        background-color: rgb(38, 168, 255);
+        border: 0.1ch solid black;
+        padding: 10px 20px;
+        font-weight: 650;
+        width: 100%;
+        align-self: center;
+        color: rgb(54, 54, 54);
+      }
+
+      .page-link {
+        font-size: 14px;
+      }
+
+      .page-link a {
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+</html>
+
+<body>
+  <div class="bkgrd">
+    <div class="controls">
+      <a class="back" href="./home.html"><i class="fa fa-arrow-left"></i></a>
+    </div>
+    <h1 class="company-name">Login</h1>
+    <form class="sign-up-form" action="" method="post">
+      <div class="name">
+        <label class="field-name" for="username">Username</label>
+        <input type="text" placeholder="Username" id="username" name="username"/>
+        <label class="message" id="username-message">Invalid username</label>
+      </div>
+      <div class="password">
+        <label class="field-name" for="password">Password</label>
+        <input type="password" placeholder="At least 8 characters" id="password" name="password"/>
+        <label class="message" id="password-message">Password is wrong</label>
+      </div>
+      <div class="submit">
+        <button class="sign-up" type="submit" onclick="Login()">Login</button>
+      </div>
+    </form>
+    <div>
+      <span class="FormErrors"></span>
+    </div>
+    <p class="page-link">Don't have an account?<a href="./signup.html">Sign Up</a></p>
+  </div>
+
+  <script src="./signup.js"></script>
+</body>
