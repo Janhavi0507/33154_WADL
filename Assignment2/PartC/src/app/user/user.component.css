@@ -1,0 +1,35 @@
+.user__container{
+    font-size: 26px;
+    text-align: center;
+}
+
+.input__container button{
+    display: block;
+    width: 200px;
+    margin: 1rem;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.input__container {
+    padding: 50px;
+    margin: 0px 50px;
+}
+
+.input__container div{
+    align-items: center;
+}
+
+.input input {
+    font-size: 22px;
+    color: rgb(207, 206, 206);
+}
+
+.btn_grp{
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    font-size: 24px;
+}
+
